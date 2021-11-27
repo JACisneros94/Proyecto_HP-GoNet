@@ -1,0 +1,67 @@
+@import '../../variables';
+
+.modal-add {
+  position: absolute;
+  width: 727px;
+  height: 596px;
+
+  background-color: white;
+  border-radius: 10px;
+
+  h2 {
+    display: flex;
+    justify-content: space-between;
+    margin: 25px;
+  }
+
+  .close {
+    cursor: pointer;
+  }
+
+  .fila {
+    display: flex;
+    margin-bottom: 15px;
+    
+    div {
+      width: 50%;
+    }
+
+    &.radios {
+      justify-content: space-between;
+      width: 80% !important;
+      
+      input {
+        margin-right: 4px;
+      }
+
+      div {
+        width: auto;
+      }
+    }
+  }
+
+  label {
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 32px;
+
+    letter-spacing: 0.01em;
+
+    color: #263238;
+  }
+
+  .text {
+    width: 310px;
+    height: 73px;
+
+    background: #263238;
+    opacity: 0.06;
+    border-radius: 5.33333px 5.33333px 0px 0px;
+  }
+
+  .center {
+    display: flex;
+    justify-content: center;
+  }
+
+}

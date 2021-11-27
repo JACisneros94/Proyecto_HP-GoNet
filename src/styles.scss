@@ -1,3 +1,4 @@
+@import 'variables';
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap');
 
 * {
@@ -5,4 +6,25 @@
     padding: 0;
     font-family: "Open Sans";
     font-style: normal;
+}
+
+.button {
+    width: 288px;
+    height: 67px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 25px;
+    letter-spacing: 0.2em;
+
+    &:hover {
+        background: $color-primary-darker-2;
+    }
+
+    &.active {
+        background: $color-primary;
+    }
 }

@@ -7,7 +7,7 @@
   </li>
   <li class="division"></li>
   <li>
-      <a href="#">
+      <a (click)="openModal()" href="#">
           AGREGAR
           <img src="/assets/user_fill_add.svg" alt="User fill add">
       </a>
@@ -16,4 +16,4 @@
 
 <app-fav-list></app-fav-list>
 
-<app-modal></app-modal>
+<app-modal [visible]="visible" (onClose)="closeModal()"></app-modal>

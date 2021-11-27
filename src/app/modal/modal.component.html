@@ -1,1 +1,62 @@
-<p>modal works!</p>
+<div class="modal-add" *ngIf="visible">
+  <h2>Agregar un personaje <img class="close" (click)="close()" src="/assets/close.svg"></h2>
+  <form action="">
+      <div class="fila">
+        <div>
+          <label for="name">NOMBRE</label><br>
+          <input class="text" type="text" name="name">
+        </div>
+        <div>
+          <label for="birht">CUMPLEAÑOS</label><br>
+          <input class="text" type="text" >
+        </div>
+      </div>
+      <div class="fila">
+        <div>
+          <label for="eyes">COLOR DE OJOS</label><br>
+          <input class="text" type="text">
+        </div>
+        <div>
+          <label for="hair">COLOR DE PELO</label><br>
+          <input class="text" type="text">
+        </div>
+      </div>
+      <div class="fila">
+        <div>
+          <label for="position">GÉNERO</label><br>
+          <div class="fila radios">
+            <div>
+              <input type="radio" name="gender" id="female" value="female">
+              <label for="female">Mujer</label>
+            </div>
+            <div>
+              <input type="radio" name="gender" id="male" value="male">
+              <label for="male">Hombre</label>
+            </div>
+          </div>
+        </div>
+        <div>
+          <label for="position">POSICIÓN</label><br>
+          <div class="fila radios">
+            <div>
+              <input type="radio" name="posicion" id="estudiante" value="Estudiante">
+              <label for="student">Estudiante</label>
+            </div>
+            <div>
+              <input type="radio" name="posicion" id="staff" value="Staff">
+              <label for="staff">Staff</label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="fila">
+        <div>
+          <label for="foto">FOTOGRAFIA</label><br>
+          <input type="file" name="fotografia" id="">
+        </div>
+      </div>
+      <div class="center">
+        <input type="submit" class="button" value="GUARDAR">
+      </div>
+  </form>
+</div>

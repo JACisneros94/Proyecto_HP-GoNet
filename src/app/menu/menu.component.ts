@@ -7,9 +7,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuComponent implements OnInit {
 
+  visible = false;
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  openModal() {
+    this.visible = true;
+  }
+
+  closeModal() {
+    this.visible = false;
   }
 
 }

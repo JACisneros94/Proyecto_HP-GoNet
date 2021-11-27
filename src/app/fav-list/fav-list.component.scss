@@ -1,0 +1,22 @@
+@import '../../variables';
+
+.list-favoritos {
+  position: absolute;
+  left: 70%;
+  width: 281px;
+  background: $color-primary;
+  border-radius: 10px;
+
+  padding-top: 50px;
+  display: flex;
+  color: white;
+
+  li {
+    justify-content: center;
+    padding: 10px 15px;
+
+      .remove {
+          cursor: pointer;
+      }
+  }
+}

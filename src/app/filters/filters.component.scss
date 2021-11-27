@@ -1,0 +1,18 @@
+@import '../../variables';
+
+h2 {
+    font-weight: 600;
+    font-size: 36px;
+    text-align: center;
+    color: white;
+    margin-top: 10px;
+}
+
+.filters {
+    display: flex;
+    justify-content: center;
+
+    .button {
+        margin: 45px;
+    }
+}
