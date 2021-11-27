@@ -1,0 +1,74 @@
+@import '../../variables';
+
+.card {
+    background-color: white;
+    width: 515px;
+    height: 265px;
+    border: 1px solid black;
+    box-sizing: border-box;
+    border-radius: 16px;
+    display: flex;
+    overflow: hidden;
+    margin-bottom: 10px;
+
+    &.dead {
+        background-color: #ccc;
+    }
+
+    .card-image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 210px;
+
+        &.gryffindor {
+            background: $gradient-gryffindor;
+        }
+        &.slytherin {
+            background: $gradient-slytherin;
+        }
+        &.hufflepuff {
+            background: $gradient-hufflepuff;
+        }
+        &.ravenclaw {
+            background: $gradient-ravenclaw;
+        }
+
+        .photo {
+            width: 169.3px;
+            height: 169.3px;
+            border-radius: 50%;
+        }
+    }
+
+    .card-info {
+        width: 305px;
+        padding: 20px;
+
+        .status-fav {
+            display: flex;
+            justify-content: space-between;
+            color: #999;
+
+            img {
+                cursor: pointer;
+            }
+        }
+
+        h3 {
+            margin: 20px 0;
+            font-weight: 600;
+            font-size: 30px;
+        }
+
+        p {
+            font-size: 14px;
+            line-height: 27px;
+            color: #3b3e41;
+
+            span {
+                font-weight: 600;
+            }
+        }
+    }
+}
