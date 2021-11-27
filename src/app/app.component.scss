@@ -1,0 +1,18 @@
+.main {
+  background-image: url('/assets/background.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: black;
+  width: 100%;
+
+  .logo {
+      padding-top: 180px;
+      display: flex;
+      justify-content: center;
+
+      img {
+          width: 193.8px;
+          height: 66px;
+      }
+  }
+}
