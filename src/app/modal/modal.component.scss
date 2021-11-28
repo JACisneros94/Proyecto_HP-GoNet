@@ -1,67 +1,152 @@
 @import '../../variables';
 
-.modal-add {
-  position: absolute;
-  width: 727px;
-  height: 596px;
+.modal {
+  display: flex;
+  justify-content: center;
+  padding-top: 3%;
+  
 
-  background-color: white;
-  border-radius: 10px;
+  .modal-add {
+    position: absolute;
+    width: 727px;
+    height: 596px;
 
-  h2 {
-    display: flex;
-    justify-content: space-between;
-    margin: 25px;
-  }
+    background-color: white;
+    border-radius: 10px;
 
-  .close {
-    cursor: pointer;
-  }
-
-  .fila {
-    display: flex;
-    margin-bottom: 15px;
-    
-    div {
-      width: 50%;
-    }
-
-    &.radios {
+    h2 {
+      display: flex;
       justify-content: space-between;
-      width: 80% !important;
+      margin: 25px;
+    }
+
+    .close {
+      cursor: pointer;
+    }
+
+    .fila {
+      display: flex;
+      margin-bottom: 15px;
+      margin-left: 25px;
       
-      input {
-        margin-right: 4px;
+      div {
+        width: 50%;
       }
 
-      div {
-        width: auto;
+      &.radios {
+        justify-content: space-between;
+        width: 80% !important;
+        
+        input {
+          margin-right: 4px;
+        }
+
+        div {
+          width: auto;
+        }
       }
     }
+
+    label {
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 32px;
+
+      letter-spacing: 0.01em;
+
+      color: #263238;
+    }
+
+    .text {
+      width: 310px;
+      height: 73px;
+      background: rgba(38,50,56,0.06);
+      border-color: rgba(38,50,56,0.06);
+      border-radius: 5.33333px 5.33333px 0px 0px;
+    }
+
+    .center {
+      display: flex;
+      justify-content: center;
+    }
+
   }
 
-  label {
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 32px;
+}
 
-    letter-spacing: 0.01em;
-
-    color: #263238;
+@media only screen and (max-width: 1250px) {
+  .modal {
+    padding-top: 4%;
   }
+}
 
-  .text {
-    width: 310px;
-    height: 73px;
-
-    background: #263238;
-    opacity: 0.06;
-    border-radius: 5.33333px 5.33333px 0px 0px;
+@media only screen and (max-width: 950px) {
+  .modal {
+    padding-top: 6%;
   }
+}
 
-  .center {
-    display: flex;
-    justify-content: center;
+@media only screen and (max-width: 750px) {
+  .modal {
+    padding-top: 8%;
+
+    .modal-add {
+      width: 400px;
+      height: 800px;
+  
+      background-color: white;
+      border-radius: 10px;
+  
+      h2 {
+        font-size: 18px;
+      }
+  
+      .fila {
+        display: block;
+        margin-bottom: 15px;
+        margin-left: 25px;
+        
+        div {
+          width: 100%;
+        }
+  
+        &.radios {
+          justify-content: space-between;
+          width: 80% !important;
+          
+          input {
+            margin-right: 4px;
+          }
+  
+          div {
+            width: auto;
+          }
+        }
+      }
+  
+      label {
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 32px;
+  
+        letter-spacing: 0.01em;
+  
+        color: #263238;
+      }
+  
+      .text {
+        width: 310px;
+        height: 40px;
+        background: rgba(38,50,56,0.06);
+        border-color: rgba(38,50,56,0.06);
+        border-radius: 5.33333px 5.33333px 0px 0px;
+      }
+  
+      .center {
+        display: flex;
+        justify-content: center;
+      }
+  
+    }
   }
-
 }

@@ -1,19 +1,20 @@
-<ul class="menu">
-  <li>
-      <a href="#">
-          FAVORITOS
-          <img src="/assets/bookmark_fill.svg" alt="Bookmark fill">
-      </a>
-  </li>
-  <li class="division"></li>
-  <li>
-      <a (click)="openModal()" href="#">
-          AGREGAR
-          <img src="/assets/user_fill_add.svg" alt="User fill add">
-      </a>
-  </li>
-</ul>
-
-<app-fav-list></app-fav-list>
+<div class="menu" appClickOutside (clickOutside)="closeList()">
+    <ul>
+        <li>
+            <div (click)="toggleList()">
+                FAVORITOS
+                <img src="/assets/bookmark_fill.svg" alt="Bookmark fill">
+            </div>
+        </li>
+        <li class="division"></li>
+        <li>
+            <div (click)="openModal()">
+                AGREGAR
+                <img src="/assets/user_fill_add.svg" alt="User fill add">
+            </div>
+        </li>
+    </ul>
+    <app-fav-list [verLista]="verLista"></app-fav-list>
+</div>
 
 <app-modal [visible]="visible" (onClose)="closeModal()"></app-modal>

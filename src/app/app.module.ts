@@ -9,6 +9,7 @@ import { CardsComponent } from './cards/cards.component';
 import { CardComponent } from './card/card.component';
 import { FavListComponent } from './fav-list/fav-list.component';
 import { ModalComponent } from './modal/modal.component';
+import { ClickOutsideDirective } from './click-outside.directive';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { ModalComponent } from './modal/modal.component';
     CardsComponent,
     CardComponent,
     FavListComponent,
-    ModalComponent
+    ModalComponent,
+    ClickOutsideDirective
   ],
   imports: [
     BrowserModule,

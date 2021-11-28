@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class MenuComponent implements OnInit {
 
   visible = false;
+  verLista = false;
 
   constructor() { }
 
@@ -18,8 +19,18 @@ export class MenuComponent implements OnInit {
     this.visible = true;
   }
 
+  toggleList() {
+    this.verLista = !this.verLista; 
+  }
+
   closeModal() {
     this.visible = false;
+  }
+
+  closeList() {
+    if (this.verLista) {
+      this.verLista = false;
+    }
   }
 
 }

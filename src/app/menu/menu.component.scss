@@ -1,37 +1,70 @@
 @import '../../variables';
-
-ul.menu {
-    width: 281px;
-    height: 36px;
+.menu {
     position: absolute;
     left: 70%;
-    background-color: $color-primary;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 25px;
-    text-align: center;
-    list-style: none;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
-    z-index: 10;
-    a {
+    ul {
+        position: absolute;
+        top: 0;
+        width: 281px;
+        height: 36px;
+        background-color: $color-primary;
         display: flex;
+        justify-content: space-around;
         align-items: center;
-        text-decoration: none;
-        color: #fff;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 25px;
+        text-align: center;
+        list-style: none;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
-        img {
-            margin-left: 5px;
+        z-index: 100;
+        div {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: #fff;
+
+            img {
+                margin-left: 5px;
+            }
+        }
+
+        .division {
+            height: 100%;
+            border: 1px solid $color-primary-darker-1;
         }
     }
+}
 
-    .division {
-        height: 100%;
-        border: 1px solid $color-primary-darker-1;
+@media only screen and (max-width: 1000px) {
+    .menu {
+        left: 50%;
     }
+}
+
+@media only screen and (max-width: 600px) {
+    .menu {
+        left: 40%;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .menu {
+        left: calc(50% - 140px);
+        bottom: 0;
+        
+        ul {
+            top: inherit;
+            bottom: 0;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+            box-shadow: 0px -4px 4px rgba(0, 0, 0, 0.25);
+        }
+  }
 }

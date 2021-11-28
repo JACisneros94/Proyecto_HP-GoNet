@@ -1,8 +1,10 @@
 .main {
+  position: relative;
   background-image: url('/assets/background.png');
   background-repeat: no-repeat;
   background-size: contain;
   background-color: black;
+  min-height: 900px;
 
   .logo {
       padding-top: 180px;
@@ -13,5 +15,11 @@
           width: 193.8px;
           height: 66px;
       }
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .main {
+    background: #000;
   }
 }
