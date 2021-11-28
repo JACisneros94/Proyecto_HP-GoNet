@@ -9,4 +9,5 @@ export default interface Character {
   hogwartsStudent: boolean;
   hogwartsStaff: boolean;
   gender: string;
+  favorite: boolean;
 };
