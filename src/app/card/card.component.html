@@ -1,33 +1,35 @@
-<div class="card">
-  <div class="card-image gryffindor">
-      <div class="photo" style="background-image: url('/assets/user_fill_add.svg');">
-      </div>
-  </div>
-  <div class="card-info">
-    <h3 class="mini">
-        <span>+</span>Juan Alberto
-    </h3>
+<div class="card" [class]="character.alive ? '' : 'dead'">
+    <div class="card-image" [class]="character.house?.toLowerCase()">
+        <div class="photo" [style.background-image]="'url(\'' + character.image + '\')'">
+        </div>
+    </div>
+    <div class="card-info">
 
-    <p class="status-fav">
-          <span> <span class="status">VIVO</span> <span class="slash">/</span> <span>ESTUDIANTE</span> </span>
-          <img src="/assets/bookmark.svg">
-      </p>
+        <h3 class="mini">
+            <span *ngIf="!character.alive">+</span> {{ character.name }}
+        </h3>
 
-      <h3 class="max">
-          <span>+</span>Juan Alberto
-      </h3>
+        <p class="status-fav">
+            <span><span class="status">{{ character.alive ? 'VIVO' : 'FINADO' }}</span> <span class="slash">/</span> <span>{{ character.hogwartsStudent == true ? 'ESTUDIANTE' : 'STAFF' }}</span> </span>
+            <img *ngIf="!character.favorite" src="/assets/bookmark.svg" (click)="toggleFavorite()">
+            <img *ngIf="character.favorite" src="/assets/bookmark_fav.svg" (click)="toggleFavorite()">
+        </p>
 
-      <p>
-          <span>Cumpleaños:</span> 20-02-1994
-      </p>
-      <p>
-          <span>Genero:</span> Male
-      </p>
-      <p>
-          <span>Color de ojos:</span> Green
-      </p>
-      <p>
-          <span>Color de pelo:</span> Black
-      </p>
-  </div>
+        <h3 class="max">
+            <span *ngIf="!character.alive">+</span> {{ character.name }}
+        </h3>
+
+        <p>
+            <span>Cumpleaños:</span> {{ character.dateOfBirth }}
+        </p>
+        <p>
+            <span>Género:</span> {{ character.gender }}
+        </p>
+        <p>
+            <span>Color de ojos:</span> {{ character.eyeColour }}
+        </p>
+        <p>
+            <span>Color de pelo:</span> {{ character.hairColour }}
+        </p>
+    </div>
 </div>

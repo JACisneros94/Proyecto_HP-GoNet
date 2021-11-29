@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import Character from '../models/Character';
+import { StateService } from '../state.service';
 
 @Component({
   selector: 'app-card',
@@ -7,9 +9,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CardComponent implements OnInit {
 
-  constructor() { }
+  @Input() character: Character = {} as Character;
+
+  favoritos: Character[] = [];
+
+  constructor(private stateService: StateService) { }
 
   ngOnInit(): void {
+    this.stateService.favoriteCharacters$.subscribe( favoritos => this.favoritos = favoritos);
+  }
+
+  toggleFavorite() {
+    if (!this.character.favorite && this.favoritos.length === 5) {
+      alert('Sólo se permiten Máx. 5 Favoritos');
+      return;
+    }
+    this.character.favorite = !this.character.favorite;
+    this.stateService.updateCharacter(this.character);
   }
 
 }

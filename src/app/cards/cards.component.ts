@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import Character from '../models/Character';
+import { StateService } from '../state.service';
 
 @Component({
   selector: 'app-cards',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CardsComponent implements OnInit {
 
-  constructor() { }
+  characters: Character[] = [];
+  loading = true;
+
+  constructor(private stateService: StateService) { }
 
   ngOnInit(): void {
+    this.stateService.filteredCharacters$.subscribe(characters => this.characters = characters);
+    this.stateService.loading$.subscribe(loading => this.loading = loading);
   }
 
 }
