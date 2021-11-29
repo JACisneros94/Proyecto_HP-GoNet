@@ -297,7 +297,8 @@
       "actor": "Gary Oldman",
       "alive": false,
       "image": "http://hp-api.herokuapp.com/images/sirius.JPG",
-      "id": 13
+      "id": 13,
+      "favorite": false
     },
     {
       "name": "Ginny Weasley",
@@ -458,7 +459,8 @@
       "actor": "Robert Pattinson",
       "alive": false,
       "image": "http://hp-api.herokuapp.com/images/cedric.png",
-      "id": 20
+      "id": 20,
+      "favorite": false
     },
     {
       "name": "Minerva McGonagall",
@@ -481,7 +483,8 @@
       "actor": "Dame Maggie Smith",
       "alive": true,
       "image": "http://hp-api.herokuapp.com/images/mcgonagall.jpg",
-      "id": 21
+      "id": 21,
+      "favorite": false
     },
     {
       "name": "Draco Malfoy",
@@ -504,7 +507,8 @@
       "actor": "Tom Felton",
       "alive": true,
       "image": "http://hp-api.herokuapp.com/images/draco.jpg",
-      "id": 22
+      "id": 22,
+      "favorite": false
     },
     {
       "name": "Ron Weasley",
@@ -527,7 +531,8 @@
       "actor": "Rupert Grint",
       "alive": true,
       "image": "http://hp-api.herokuapp.com/images/ron.jpg",
-      "id": 23
+      "id": 23,
+      "favorite": false
     },
     {
       "name": "Hermione Granger",
@@ -551,7 +556,7 @@
       "alive": true,
       "image": "http://hp-api.herokuapp.com/images/hermione.jpeg",
       "id": 24,
-      "favorite": true
+      "favorite": false
     },
     {
       "name": "Harry Potter",
@@ -575,7 +580,7 @@
       "alive": true,
       "image": "http://hp-api.herokuapp.com/images/harry.jpg",
       "id": 25,
-      "favorite": true
+      "favorite": false
     }
   ]
 }

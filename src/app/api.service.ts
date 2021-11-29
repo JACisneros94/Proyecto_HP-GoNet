@@ -26,8 +26,6 @@ export class ApiService {
   }
 
   updateCharacter(character: Character): Observable<Character> {
-    console.log(character);
-    
     return this.http.patch<Character>(this.url+'/'+ character.id, character);
   }
 

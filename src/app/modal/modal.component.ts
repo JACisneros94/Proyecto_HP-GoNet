@@ -21,8 +21,8 @@ export class ModalComponent implements OnInit {
       dateOfBirth: ['', [Validators.required]],
       eyeColour: ['', [Validators.required]],
       hairColour: ['', [Validators.required]],
-      gender: ['',],
-      position: ['',],
+      gender: ['', [Validators.required]],
+      position: ['', [Validators.required]],
       image: ['', [Validators.required]]
     });
 
