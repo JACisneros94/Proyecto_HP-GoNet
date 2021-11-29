@@ -1,9 +1,9 @@
 <div class="list-favoritos" *ngIf="verLista">
   <ul>
-      <li>
-          <img src="/assets/user_fill_add.svg">
-          <span>Nombre personaje</span>
-          <img class="remove" src="/assets/trash.svg">
+      <li *ngFor="let character of characters">
+          <img class="photo" [src]="character.image">
+          <div class="characterName"><span>{{ character.name }}</span></div>
+          <img class="remove" src="/assets/trash.svg" (click)="removeFavorite(character)">
       </li>
   </ul>
 </div>

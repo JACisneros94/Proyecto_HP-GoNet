@@ -12,15 +12,32 @@
   color: white;
 
   ul {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
     list-style: none;
   }
 
   li {
-    justify-content: center;
-    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 10px 10px;
+    
+      .photo {
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        background-position: center;
+      }
+
+      .characterName {
+        flex: 2;
+        padding: 0.5rem;
+      }
 
       .remove {
-          cursor: pointer;
+        cursor: pointer;
       }
   }
 }
