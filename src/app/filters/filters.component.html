@@ -1,10 +1,16 @@
 <h2>Selecciona tu filtro</h2>
 
 <div class="filters">
-    <button class="button">
+    <button
+        class="button"
+        [class]="filterIsActive('student') ? 'active' : ''"
+        (click)="toggleFilter('student')">
         ESTUDIANTES
     </button>
-    <button class="button">
+    <button 
+        class="button"
+        [class]="filterIsActive('staff') ? 'active' : ''"
+        (click)="toggleFilter('staff')">
         STAFF
     </button>
 </div>
