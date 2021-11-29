@@ -26,3 +26,4 @@
     *Cuadrar la Card en pequeño en el modo responsive.
     *Mantener los favoritos ya que al refrescar se quitaban los Characters de la lista, lo cual termine pasan o guardando el campo favorite al que iba selecionando y colocarle id a todos (tambien a los que agregaba).
     *También algunos detalles al agregar un Character nuevo con su imagen principalmente y guardar en la DB, pero se logro.
+    *Configuración de Netlify para que se visualizara la App Web en el dominio.
