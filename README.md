@@ -1,27 +1,28 @@
-# ProyectoHPGoNet
+# HOLA, BIENVENIDO A LA APP DE HARRY POTTER EN ANGULAR
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.11.
+## CUANDO DESEE COMENZAR, PRIMERO RECUERDA LEVANTAR SERVICIO EL JSON SERVER
+  JSON Server se ejecuta con el siguiente comando y esta ligado al archivo db.json en la carpeta principal del proyecto.
+  ### `json-server db.json`
 
-## Development server
+## DESPUES DE EJECUTAR JSON YA PUEDES CORRER LOCALMENTE O VISUALIZARLO EN NETLIFY
+  ### `ng serve`
+  ### Link `juan-alberto-testgonet.netlify.app`
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## HACER LOS TEST UNITARIOS EN ANGULAR
+    Para correr los test unitarios en Angular, se utiliza el siguiente comando:
+  ### `ng test` 
 
-## Code scaffolding
+## LO QUE MAS ME GUSTO...
+    Principalmente que fuera de Harry Potter la prueba, y que fue muy enriquecedora por lo que practique, investigue y aprendi,
+    me gustó como quedo el resultado más que nada lo responsive, el agregar favoritos y quitarlos, asi como trabajar los filtros. 
+  
+## CON MAS TIEMPO HUBIERA HECHO...
+    Documentar mi codigo para que cualquiera se pudiera guiar mejor en él.
+    Otorgar puntos a los personajes (Students) y se contabilizaran de acuerdo a su Casa, y con otra opcion en el menu ver el marcador.
+    También hacer una vista más grande (P. ej. en un Modal) al seleccionar un personaje y ver más información.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## LO QUE MÁS ME COSTO HACER...
+    *Cuadrar la Card en pequeño en el modo responsive.
+    *Mantener los favoritos ya que al refrescar se quitaban los Characters de la lista, lo cual termine pasan o guardando el campo favorite al que iba selecionando y colocarle id a todos (tambien a los que agregaba).
+    *También algunos detalles al agregar un Character nuevo con su imagen principalmente y guardar en la DB, pero se logro.
