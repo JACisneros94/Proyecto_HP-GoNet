@@ -10,6 +10,8 @@ import { CardComponent } from './card/card.component';
 import { FavListComponent } from './fav-list/fav-list.component';
 import { ModalComponent } from './modal/modal.component';
 import { ClickOutsideDirective } from './click-outside.directive';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,10 @@ import { ClickOutsideDirective } from './click-outside.directive';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule,
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

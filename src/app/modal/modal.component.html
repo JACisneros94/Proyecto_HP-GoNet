@@ -1,25 +1,25 @@
 <div class="modal">
   <div class="modal-add" *ngIf="visible">
     <h2>Agregar un personaje <img class="close" (click)="close()" src="/assets/close.svg"></h2>
-    <form autocomplete="off" action="">
+    <form autocomplete="off" [formGroup]="form" (ngSubmit)="submit()">
         <div class="fila">
           <div>
             <label for="name">NOMBRE</label><br>
-            <input class="text" type="text" name="name">
+            <input class="text" type="text" name="name" formControlName="name">
           </div>
           <div>
             <label for="birth">CUMPLEAÑOS</label><br>
-            <input class="text" type="text" name="dateOfBirth">
+            <input class="text" type="text" name="dateOfBirth" formControlName="dateOfBirth">
           </div>
         </div>
         <div class="fila">
           <div>
             <label for="eyes">COLOR DE OJOS</label><br>
-            <input class="text" type="text" name="eyeColour">
+            <input class="text" type="text" name="eyeColour" formControlName="eyeColour">
           </div>
           <div>
             <label for="hair">COLOR DE PELO</label><br>
-            <input class="text" type="text" name="hairColour">
+            <input class="text" type="text" name="hairColour" formControlName="hairColour">
           </div>
         </div>
         <div class="fila">
@@ -27,11 +27,11 @@
             <label for="position">GÉNERO</label><br>
             <div class="fila radios">
               <div>
-                <input type="radio" name="gender" id="female" value="female">
+                <input type="radio" name="gender" formControlName="gender" id="female" value="female">
                 <label for="female">Mujer</label>
               </div>
               <div>
-                <input type="radio" name="gender" id="male" value="male">
+                <input type="radio" name="gender" formControlName="gender" id="male" value="male">
                 <label for="male">Hombre</label>
               </div>
             </div>
@@ -40,11 +40,11 @@
             <label for="position">POSICIÓN</label><br>
             <div class="fila radios">
               <div>
-                <input type="radio" name="posicion" id="student" value="Student">
+                <input type="radio" name="position" formControlName="position" id="student" value="student">
                 <label for="student">Estudiante</label>
               </div>
               <div>
-                <input type="radio" name="posicion" id="staff" value="Staff">
+                <input type="radio" name="position" formControlName="position" id="staff" value="staff">
                 <label for="staff">Staff</label>
               </div>
             </div>
@@ -52,8 +52,8 @@
         </div>
         <div class="fila">
           <div>
-            <label for="foto">FOTOGRAFIA</label><br>
-            <input type="file" name="image" id="image">
+            <label for="foto">FOTOGRAFIA *</label><br>
+            <input type="file" name="image" formControlName="image" id="image">
           </div>
         </div>
         <div class="center">
