@@ -13,4 +13,10 @@
         (click)="toggleFilter('staff')">
         STAFF
     </button>
+    <button 
+        class="button"
+        [class]="filterIsActive('dead') ? 'active' : ''"
+        (click)="toggleFilter('dead')">
+        FINADOS
+    </button>
 </div>

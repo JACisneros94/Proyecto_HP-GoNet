@@ -31,7 +31,8 @@ export class StateService {
 
   get filteredCharacters$() {
     return combineLatest([this.characters$, this.activeFilter$]).pipe(map(([characters, activeFilter]) => {
-      return !activeFilter ? characters : characters.filter( character => activeFilter === 'student' ? character.hogwartsStudent : character.hogwartsStaff);
+      return !activeFilter ? characters : characters.filter( character =>
+        activeFilter === 'student' ? character.hogwartsStudent : activeFilter === 'dead' ? !character.alive : character.hogwartsStaff);
     }));
   }
 
